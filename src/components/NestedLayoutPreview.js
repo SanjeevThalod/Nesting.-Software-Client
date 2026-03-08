@@ -19,9 +19,9 @@ function NestedLayoutPreview({ sheets, nestedShapes, sheetWidth, sheetHeight, on
   const currentSheet = displaySheets.length > 0 && currentSheetIndex < displaySheets.length 
     ? displaySheets[currentSheetIndex] 
     : null;
-  const shapes = currentSheet?.nestedShapes || [];
-  const sw = currentSheet?.sheetWidth || sheetWidth;
-  const sh = currentSheet?.sheetHeight || sheetHeight;
+  const shapes = useMemo(() => currentSheet?.nestedShapes || [], [currentSheet]);
+  const sw = currentSheet?.sheetWidth ?? sheetWidth;
+  const sh = currentSheet?.sheetHeight ?? sheetHeight;
 
   useEffect(() => {
     if (displaySheets.length === 0 || currentSheetIndex >= displaySheets.length) return;

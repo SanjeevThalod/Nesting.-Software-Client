@@ -1,0 +1,78 @@
+.shape-preview {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shape-preview h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.preview-info {
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.canvas-container {
+  border: 2px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.no-shapes {
+  color: #999;
+  text-align: center;
+  padding: 40px;
+  font-style: italic;
+}
+
+.shape-details {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.shape-details h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 8px;
+}
+
+.detail-item {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 5px;
+}
+
+.detail-item strong {
+  color: #333;
+  margin-right: 5px;
+}
+
+.detail-item .area {
+  color: #888;
+  font-size: 0.85rem;
+}

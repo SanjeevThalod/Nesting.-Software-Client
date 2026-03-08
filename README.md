@@ -14,6 +14,13 @@
 
 3. **Build:** Vercel will run `npm run build` and serve the `build` folder. SPA routes are rewritten to `index.html` via `vercel.json`.
 
+**If the build fails on Vercel:**
+- Scroll to the **bottom** of the build log; the real error is usually after "Failed to compile" or the last command.
+- In Vercel → Project → Settings → Environment Variables, you can try:
+  - `CI` = `true` (treats warnings as non-fatal)
+  - `GENERATE_SOURCEMAP` = `false` (reduces memory use)
+- Ensure **Root Directory** is set to `client` so `vercel.json` and `package.json` are used.
+
 ## Local development
 
 ```bash
